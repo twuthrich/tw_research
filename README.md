@@ -2,7 +2,7 @@ This file serves as a documented example of how to take ros bag files, turn them
 
 The following import statements are necessary: 
 
-'''
+```
 
 from camera_frame_mocap_to_velocity import *
 from camera_to_of import *
@@ -14,7 +14,7 @@ import pdb
 import numpy as np
 from train_model import *
 
-'''
+```
 
 ## Step 1: Define which bags are used for training and testing
 If we have train_1.bag, train_2.bag, train_3.bag, test_1.bag, and test_2.bag, our lists would be as follows:
