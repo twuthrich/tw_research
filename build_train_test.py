@@ -49,7 +49,7 @@ def build_train_test(data_list, output_name):
 
 	# TODO: Change these paths to fit your application
 	of_path = "/home/toriw/tw_research/processed_bags/of/"
-	v_path = "/home/toriw/research/processed_bags/v/"
+	v_path = "/home/toriw/tw_research/processed_bags/v/"
 	x_test_path = "/home/toriw/tw_research/processed_bags/X_test"
 	y_test_path = "/home/toriw/tw_research/processed_bags/Y_test"
 	x_train_path = "/home/toriw/tw_research/processed_bags/X_train"

@@ -120,5 +120,15 @@ visualize_of("\home\toriw\Documents\rosbags\sim_0_vert.bag", "sim_0_vert")
 
 Remember to update the parameters in params.yaml to reflect the image size and descriptor type before running the optical flow visualization. 
 
+The analyze_ttd code produces plots of the actual vs estimated trajectory. 
+
 # Other Notes
 The polar descriptors, and their associated plotting functions have been designed specifically for a particular image size. If your image size varies from 368x640, and you wish to use polar descriptors, you will need to update the functions to relect new image dimensions. 
+
+# Example Data
+Example test data and a model are provided here. The model is named drone_sim, and the test set is named hallway_test. We can run the following to generate a plot of the estimated trajectory when using drone_sim model on the hallway_test dataset. 
+
+```
+compute_trajectory("drone_sim", "hallway_test", "None")
+analyze_ttd("hallway_test")
+```

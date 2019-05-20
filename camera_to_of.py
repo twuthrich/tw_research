@@ -61,7 +61,7 @@ def gen_descriptors(bag, name) :
 	# TODO: Update these to fit your application
 	of_directory = "/home/toriw/tw_research/processed_bags/of"
 	image_topic_name = "/airsim/image_raw"
-	position_topic_name = "/mocap/pose"
+	position_topic_name = "/acePositionData"
 
 	###########################################
 

@@ -12,11 +12,11 @@ thx_correct: False
 thy_correct: False
 thz_correct: False  
 
-# image_h: 368                # Height of image [pixels]
-# image_w: 640                # Width of image [pixels]
+image_h: 368                # Height of image [pixels]
+image_w: 640                # Width of image [pixels]
 
-image_h: 144                # Height of image [pixels]
-image_w: 256                # Width of image [pixels]
+# image_h: 144                # Height of image [pixels]
+# image_w: 256                # Width of image [pixels]
 
 fill_in_zeros: False        # If a section of the decriptor has no features, use the previous optical flow value
 
@@ -55,7 +55,7 @@ subPixCount: 20
 subPixEPS: 0.03
 
 ### Training Data
-test_percentage: 0       # 0 to make a training set, 1 to make a test set, in between to split
+test_percentage: 1       # 0 to make a training set, 1 to make a test set, in between to split
 
 ### Prediction Objective
 predict_vx: True           # Set which output is used in the data set

@@ -49,7 +49,7 @@ def compute_trajectory(model_name, data_set, rosbag):
 	predict_vthz = params_dict['predict_vthz']
 
 	## TODO: Change these paths for your application
-	v_path = "/home/toriw/research/processed_bags/v/"
+	v_path = "/home/toriw/tw_research/processed_bags/v/"
 	pose_path = "/home/toriw/tw_research/processed_bags/raw_pose/"
 	x_test_path = "/home/toriw/tw_research/processed_bags/X_test/"
 	gt_traj_path = "/home/toriw/tw_research/processed_bags/gt_v_traj/"
