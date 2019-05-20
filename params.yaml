@@ -1,0 +1,77 @@
+### Velocity Processing
+# window_size: 0.1              # Size of window to use for smoothing GT vel [s]
+window_size: 2.0             # Size of window to use for smoothing GT vel [s]
+
+show_v_plot: False             # Whether or not to show plot explaining v calculations
+
+### Position Correction
+x_correct: False            # bool to correct position (used to fix zeros & outliers)
+y_correct: False
+z_correct: False
+thx_correct: False    
+thy_correct: False
+thz_correct: False  
+
+# image_h: 368                # Height of image [pixels]
+# image_w: 640                # Width of image [pixels]
+
+image_h: 144                # Height of image [pixels]
+image_w: 256                # Width of image [pixels]
+
+fill_in_zeros: False        # If a section of the decriptor has no features, use the previous optical flow value
+
+flatten_descriptor: False   # If not using conv nets, flatten into a 1-D array
+
+descriptor_type: "grid"         # Grid-based or polar descriptor ("grid", "polar")
+
+### Image Cropping 
+upperOnly: False
+
+### Polar Descriptor
+partition_center: False     # Partition inner circle of polar descriptor, or leave open
+polar_statistic: "median"   # Statistic to use to process optical flow in each section
+
+### Grid Descriptor
+grid_statistic: "median"    # Statistic to use to process optical flow in each section
+grids: 4                 # Number of desired spaces when using grid descriptor
+
+### Featute Detection
+maxCorners: 500             # Max # corners to detect
+qualityLevel: 0.01
+minDistance: 10             # Min distance between detected features [pixels]
+blockSize: 3              
+
+### Feature Tracking 
+winSizeX: 15               # Size of window over which to track [pixels]
+winSizeY: 15
+maxLevel: 3
+error_threshold: 10         # Throw out ponts with error in excess of this
+
+### Sub-Pixel Accuracy
+useSubPix: False             
+subPixWinSize: 20
+subPixZeroZone: -1
+subPixCount: 20
+subPixEPS: 0.03
+
+### Training Data
+test_percentage: 0       # 0 to make a training set, 1 to make a test set, in between to split
+
+### Prediction Objective
+predict_vx: True           # Set which output is used in the data set
+predict_vy: True
+predict_vz: True
+predict_vthx: False
+predict_vthy: False
+predict_vthz: False
+
+### Model Building
+model_type: "RF"            # Either "NN" or "RF"
+n_layers: 500               # Number of hidden layers 
+scaler_type: "minmax"       # Either "minmax" or "std"
+
+### Simulation or Mocap
+sim: True
+
+### Write Video
+write_video: False 
