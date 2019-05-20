@@ -136,9 +136,9 @@ def compute_trajectory(model_name, data_set, rosbag):
 	z_prop_gt = propagate_v(dt_image, v_filtered_target[:,2], z_0)
 
 
-	x_name = model_name + "_" + data_set + "_x"
-	y_name = model_name + "_" + data_set + "_y"
-	z_name = model_name + "_" + data_set + "_z"
+	x_name = data_set + "_x"
+	y_name = data_set + "_y"
+	z_name = data_set + "_z"
 
 	name = model_name + "_" + data_set
 

@@ -87,7 +87,7 @@ for i in range(len(test_list)):
 This code shows how to compute the total-traveled distance error between the estimated and actual trajectories, on each of the trajectories contained in test_list.  
 
 ```
-trajectory_names = [model_name + "_" + item for item in test_list]
+trajectory_names = test_list
 ttd_error_list = []
 for i in range(len(trajectory_names)):
 	ttd_error = get_ttd(trajectory_names[i])
@@ -101,4 +101,24 @@ txt_name = model_name + ".txt"
 np.savetxt(txt_name, ttd_error_list, delimiter =',')
 ```
 
-# File Descriptions
+# Visualizations
+## Velocity & Optical flow
+Somtimes, we may want to check the velocity data output by a particular bag. Say we have a bag, sim_0_vert.bag, which we process using either as part of a batch (as described above) or as an individual bag (as shown here):
+
+```
+camera_frame_mocap_to_velocity("\home\toriw\Documents\rosbags\sim_0_vert.bag", "sim_0_vert") 
+
+camera_to_of("\home\toriw\Documents\rosbags\sim_0_vert.bag", "sim_0_vert") 
+```
+
+We can now visualize the velocity in the form of a graph, and the optical flow in the form of a movie by making the following calls:
+```
+visualize_velocity("sim_0_vert")
+
+visualize_of("\home\toriw\Documents\rosbags\sim_0_vert.bag", "sim_0_vert") 
+```
+
+Remember to update the parameters in params.yaml to reflect the image size and descriptor type before running the optical flow visualization. 
+
+# Other Notes
+The polar descriptors, and their associated plotting functions have been designed specifically for a particular image size. If your image size varies from 368x640, and you wish to use polar descriptors, you will need to update the functions to relect new image dimensions. 
