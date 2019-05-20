@@ -33,10 +33,10 @@ def camera_frame_mocap_to_velocity(bag, name):
 	sim = params_dict['sim']
 
 	# TODO: Update these paths and topic names to fit your application
-	raw_pose_directory = "/home/me/tw_research/processed_bags/raw_pose"
-	v_directory = "/home/me/tw_research/processed_bags/v"
-	image_topic_name = "/imageraw"
-	position_topic_name = "/mocap/pose"
+	raw_pose_directory = "/home/toriw/tw_research/processed_bags/raw_pose"
+	v_directory = "/home/toriw/tw_research/processed_bags/v"
+	image_topic_name = "/airsim/image_raw"
+	position_topic_name = "/acePositionData"
 
 	###########################################
 

@@ -59,8 +59,8 @@ def gen_descriptors(bag, name) :
 	upperOnly = params_dict['upperOnly']
 
 	# TODO: Update these to fit your application
-	of_directory = "/home/me/tw_research/processed_bags/of"
-	image_topic_name = "/imageraw"
+	of_directory = "/home/toriw/tw_research/processed_bags/of"
+	image_topic_name = "/airsim/image_raw"
 	position_topic_name = "/mocap/pose"
 
 	###########################################

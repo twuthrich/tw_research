@@ -22,7 +22,7 @@ from descriptor_plotters import *
 
 def visualize_of(bag, name) :
 
-	descriptors = np.load("/home/toriw/research/processed_bags/of/" + name + ".npy")
+	descriptors = np.load("/home/toriw/tw_research/processed_bags/of/" + name + ".npy")
 
 	###### Read .yaml & set parameters #######
 
@@ -63,8 +63,8 @@ def visualize_of(bag, name) :
 	criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, subPixCount, subPixEPS)
 
 	# TODO: Update these to fit your application
-	of_directory = "/home/me/tw_research/processed_bags/of"
-	image_topic_name = "/imageraw"
+	of_directory = "/home/toriw/tw_research/processed_bags/of"
+	image_topic_name = "/airsim/image_raw"
 	position_topic_name = "/mocap/pose"
 
 

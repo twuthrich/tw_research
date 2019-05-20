@@ -8,8 +8,8 @@ import os
 
 def visualize_velocity(name):
 	# TODO: change these paths to fit your application
-	velocity_path = "/home/me/tw_research/processed_bags/v/"
-	position_path = "/home/me/tw_research/processed_bags/raw_pose/"
+	velocity_path = "/home/toriw/tw_research/processed_bags/v/"
+	position_path = "/home/toriw/tw_research/processed_bags/raw_pose/"
 	###
 
 	v_in = np.load(velocity_path + name + ".npy")
@@ -31,27 +31,27 @@ def visualize_velocity(name):
 
 	axarr[0, 0].plot(t_v, vx)
 	axarr[0, 0].set_xlabel('Time [s]')
-	axarr[0, 0].set_ylabel('X Velocity [s]')
+	axarr[0, 0].set_ylabel('X Velocity [m/s]')
 
 	axarr[0, 1].plot(t_v, vy)
 	axarr[0, 1].set_xlabel('Time [s]')
-	axarr[0, 1].set_ylabel('Y Velocity [s]')
+	axarr[0, 1].set_ylabel('Y Velocity [m/s]')
 
 	axarr[0, 2].plot(t_v, vz)
 	axarr[0, 2].set_xlabel('Time [s]')
-	axarr[0, 2].set_ylabel('Z Velocity [s]')
+	axarr[0, 2].set_ylabel('Z Velocity [m/s]')
 
 	axarr[1, 0].plot(t_v, ox)
-	axarr[0, 0].set_xlabel('Time [s]')
-	axarr[0, 0].set_ylabel('Roll Velocity [s]')
+	axarr[1, 0].set_xlabel('Time [s]')
+	axarr[1, 0].set_ylabel('Roll Velocity [rad/s]')
 
 	axarr[1, 1].plot(t_v, oy)
 	axarr[1, 1].set_xlabel('Time [s]')
-	axarr[1, 1].set_ylabel('Pitch Velocity [s]')
+	axarr[1, 1].set_ylabel('Pitch Velocity [rad/s]')
 
 	axarr[1, 2].plot(t_v, oz)
 	axarr[1, 2].set_xlabel('Time [s]')
-	axarr[1, 2].set_ylabel('Yaw Velocity [s]')
+	axarr[1, 2].set_ylabel('Yaw Velocity [rad/s]')
 
 	plt.show()
 
@@ -62,27 +62,27 @@ def visualize_velocity(name):
 
 	axarr[0, 0].plot(t_v, x_r)
 	axarr[0, 0].set_xlabel('Time [s]')
-	axarr[0, 0].set_ylabel('X Position [s]')
+	axarr[0, 0].set_ylabel('X Position [m]')
 
 	axarr[0, 1].plot(t_v, y_r)
 	axarr[0, 1].set_xlabel('Time [s]')
-	axarr[0, 1].set_ylabel('Y Position [s]')
+	axarr[0, 1].set_ylabel('Y Position [m]')
 
 	axarr[0, 2].plot(t_v, z_r)
 	axarr[0, 2].set_xlabel('Time [s]')
-	axarr[0, 2].set_ylabel('Z Position [s]')
+	axarr[0, 2].set_ylabel('Z Position [m]')
 
-	axarr[1, 0].plot(t_v, th_x)
-	axarr[0, 0].set_xlabel('Time [s]')
-	axarr[0, 0].set_ylabel('Roll Position [s]')
+	axarr[1, 0].plot(t_v, thx_r)
+	axarr[1, 0].set_xlabel('Time [s]')
+	axarr[1, 0].set_ylabel('Roll Position [rad]')
 
-	axarr[1, 1].plot(t_v, th_y)
+	axarr[1, 1].plot(t_v, thy_r)
 	axarr[1, 1].set_xlabel('Time [s]')
-	axarr[1, 1].set_ylabel('Pitch Position [s]')
+	axarr[1, 1].set_ylabel('Pitch Position [rad]')
 
-	axarr[1, 2].plot(t_v, th_z)
+	axarr[1, 2].plot(t_v, thz_r)
 	axarr[1, 2].set_xlabel('Time [s]')
-	axarr[1, 2].set_ylabel('Yaw Position [s]')
+	axarr[1, 2].set_ylabel('Yaw Position [rad]')
 
 	plt.show()
 
