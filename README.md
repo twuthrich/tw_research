@@ -42,7 +42,6 @@ for i in range(len(all_list)):
  	s = "Processing #%d out of %d \n" %(i+1, len(all_list))
  	print s
 
- 	# bag = "/home/toriw/Documents/ros_bags/forward_segments/" + item + ".bag"
  	bag = bag_path + prefix + ".bag"
 
  	camera_frame_mocap_to_velocity(bag, prefix)
